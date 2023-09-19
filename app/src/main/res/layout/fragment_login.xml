@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="20dp"
+    android:id="@+id/registerFragment"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:textStyle="bold"
+        android:textColor="#2B44CD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:layout_marginTop="80dp"
+        android:id="@+id/headingText"
+        android:text="Firebase Authentication"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="#2B44CD"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/loginEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headingText"
+        app:layout_constraintVertical_bias="0.452"
+
+        />
+
+    <EditText
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:background="@drawable/edittext_border"
+        android:id="@+id/loginEmail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:autofillHints="true"
+        android:hint="Enter Email ID"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headingText" />
+
+    <EditText
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:background="@drawable/edittext_border"
+
+        android:layout_marginTop="50dp"
+        android:id="@+id/loginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter Password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginEmail"
+        android:autofillHints="true"
+        android:inputType="textPassword" />
+
+    <Button
+        android:textStyle="bold"
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#2B44CD"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPassword" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bg"
+        android:progress="0"
+        android:indeterminate="true"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn"
+        android:id="@+id/loginLoadingProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_centerInParent="true"
+        />
+
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Account Not Found"
+        android:textColor="#F44336"
+        app:layout_goneMarginTop="40dp"
+        android:textSize="17sp"
+android:id="@+id/accountNotFound"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/loginLoadingProgressBar"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Want to Register?"/>
+
+        <TextView
+            android:id="@+id/createBtn"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#2B44CD"
+            android:textSize="20sp"
+            android:text="Create"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

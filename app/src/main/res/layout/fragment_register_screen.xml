@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="20dp"
+    android:id="@+id/registerFragment"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:textStyle="bold"
+        android:textColor="#2B44CD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:layout_marginTop="80dp"
+        android:id="@+id/headingText"
+        android:text="Firebase Authentication"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="#2B44CD"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/emailIdEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headingText"
+        app:layout_constraintVertical_bias="0.452"
+
+        />
+    <EditText
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:background="@drawable/edittext_border"
+        android:id="@+id/userNameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:autofillHints="true"
+        android:hint="Enter Username"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headingText" />
+
+    <EditText
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:background="@drawable/edittext_border"
+        android:id="@+id/emailIdEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:autofillHints="true"
+        android:hint="Enter Email ID"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headingText" />
+
+    <EditText
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:background="@drawable/edittext_border"
+
+        android:layout_marginTop="50dp"
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter Password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailIdEditText"
+        android:autofillHints="true"
+        android:inputType="textPassword" />
+
+    <Button
+        android:textStyle="bold"
+        android:id="@+id/signUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#2B44CD"
+        android:text="Sign Up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bg"
+        android:progress="0"
+        android:indeterminate="true"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpBtn"
+        android:id="@+id/loadingProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_centerInParent="true"
+        />
+
+
+
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/loadingProgressBar"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have account?"/>
+
+        <TextView
+            android:id="@+id/signInBtn"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#2B44CD"
+            android:textSize="20sp"
+            android:text="Sign In"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
